@@ -9,6 +9,7 @@ import re
 import time
 import json
 import requests
+from datetime import datetime
 
 class AqiSpider(object):
     """docstring for AqiSpider"""
@@ -40,6 +41,7 @@ class AqiSpider(object):
     def main(self):
         items = self.crawl()
         for item in items:
+            item['DateTime'] = str(datetime.now().date())
             self.save_data(item)
 
 
