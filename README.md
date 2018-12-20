@@ -1,5 +1,14 @@
-README
+# README
 
-控制质量状况采集
+## INFO
+
+空气质量状况采集
+
+## RUN
+
+```shell
+cd AQISpider
+./run.sh
+```
 
 每天15:30进行采集
