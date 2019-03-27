@@ -25,7 +25,7 @@ class AqiSpider(object):
             'User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36',
             'X-Requested-With':'XMLHttpRequest',
         }
-        self.fp = open('./aqidata.json','a',encoding='utf-8')
+        self.fp = open('/work/aqidata.json','a',encoding='utf-8')
 
     def crawl(self):
         r = requests.get(url=self.url.format(timestr=str(time.time()).replace('.','')[0:-4]),headers=self.headers)
